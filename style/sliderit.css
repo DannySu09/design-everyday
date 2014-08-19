@@ -1,0 +1,17 @@
+.slider-wrap {
+  position: relative;
+  overflow: hidden; }
+
+.slider-inner.is-transition {
+  -webkit-transition: all .6s ease-out;
+  transition: all .4s ease; }
+.slider-inner.is-horizon {
+  white-space: nowrap;
+  word-spacing: -0.31em;
+  font-size: 0; }
+  .slider-inner.is-horizon .slider-item {
+    display: inline-block; }
+
+.slider-item {
+  height: 100%;
+}
