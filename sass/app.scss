@@ -4,8 +4,11 @@ html {
 
 body {
   height: 100%;
-  position: relative;
-  background-color: #eeeeee;
+  background-color: #ffffff;
+}
+
+img {
+  border: none;
 }
 
 .gallery {
@@ -18,8 +21,6 @@ body {
   padding-right: 20px;
   box-sizing: border-box;
   background-color: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.2);
-  -webkit-box-shadow: 0 0 1px 0 rgba(0,0,0,0.2);
   -webkit-box-sizing: border-box;
   transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
@@ -34,13 +35,16 @@ body {
   }
   & .item {
     width: 100%;
-    height: 240px;
     text-align: center;
     vertical-align: top;
     display: inline-block;
-    img {
+    vertical-align: middle;
+    img.icon {
       width: 240px;
-      height: 240px;
+    }
+    img.ui {
+      max-width: 450px;
+      max-height: 600px;
     }
   }
 }
@@ -56,20 +60,38 @@ body {
   -moz-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   &-btn {
+    width: 70px;
+    height: 70px;
     border: none;
-    width: 50px;
-    height: 50px;
+    outline: none;
     display: block;
     color: #ffffff;
+    font-size: 30px;
     text-align: center;
-    line-height: 50px;
+    line-height: 70px;
     border-radius: 50%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgb(47, 162, 197);
+    -webkit-transition: all .2ss;
+    -moz-transition: all .2ss;
+    -ms-transition: all .2ss;
+    -o-transition: all .2ss;
+    transition: all .2ss;
+    &:hover {
+      background-color: rgb(49, 113, 177);
+    }
     &-prev {
       float: left;
+      margin-left: 80px;
+      @media (max-width: 768px) and (min-width: 320px) {
+        margin-left: 10px;
+      }
     }
     &-next {
       float: right;
+      margin-right: 80px;
+      @media (max-width: 768px) and (min-width: 320px)  {
+        margin-right: 10px;
+      }
     }
   }
 }
