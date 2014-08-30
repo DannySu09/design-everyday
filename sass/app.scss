@@ -59,19 +59,23 @@ body {
     border: none;
     outline: none;
     display: block;
-    color: #ffffff;
+    color: rgb(47, 162, 197);
     font-size: 30px;
     text-align: center;
     line-height: 70px;
     border-radius: 50%;
-    background-color: rgb(47, 162, 197);
+    border: 1px solid rgb(47, 162, 197);
+    background-color: transparent;
     -webkit-transition: all .2ss;
     -moz-transition: all .2ss;
     -ms-transition: all .2ss;
     -o-transition: all .2ss;
     transition: all .2ss;
     &:hover {
-      background-color: rgb(49, 113, 177);
+      background-color: rgb(47, 162, 197);
+      &:before {
+        color: #ffffff
+      }
     }
     &-prev {
       float: left;
