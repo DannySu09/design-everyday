@@ -10,10 +10,11 @@
 	<string>a6af16d03e62e9b34da1be1098affa7b56d9838b</string>
 	<key>fonts</key>
 	<array>
+		<string>HiraginoSansGB-W6</string>
 		<string>HiraginoSansGB-W3</string>
 	</array>
 	<key>length</key>
-	<integer>257830</integer>
+	<integer>1331579</integer>
 	<key>version</key>
 	<integer>37</integer>
 </dict>
