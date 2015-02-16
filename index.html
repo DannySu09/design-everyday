@@ -6,81 +6,60 @@
     <title>作品</title>
     <link rel="stylesheet" href="http://cdn.staticfile.org/normalize/3.0.1/normalize.min.css"/>
     <link rel="stylesheet" href="style/awesome-font/font-awesome.min.css"/>
-    <link rel="stylesheet" href="style/sliderit.css"/>
     <link rel="stylesheet" href="style/app.css"/>
 </head>
 <body>
-    <div class="gallery slider-wrap">
-        <div class="slider-inner">
-            <div class="slider-item item">
-                <img class="icon" src="dist/icons/2014-8-11-map.png" alt="小地图哦"/>
-            </div>
-            <div class="slider-item item">
-                <img class="icon" src="dist/icons/2014-8-13-napkin.png" alt="不侧漏哦"/>
-            </div>
-            <div class="slider-item item">
-                <img class="icon" src="dist/icons/2014-8-18-tropy.jpg" alt="Larry O'Brien NBA Championship Trophy"/>
-            </div>
-            <div class="slider-item item">
-                <img class="icon" src="dist/icons/2014-8-21-browser@2x.png" alt="browser icon"/>
-            </div>
-            <div class="slider-item item">
-                <img class="ui" src="dist/ui/2014-8-23-login-form@1x.jpg" alt="first serious sketch work"/>
-            </div>
-            <div class="slider-item item">
-                <img class="icon" src="dist/icons/2014-8-30-colorSwitch.jpg" alt="colorful imitation"/>
-            </div>
-            <div class="slider-item item">
-                <img class="ui" src="dist/ui/2014-9-16-login-peacefully@2x.jpg" alt="a peaceful login form"/>
-            </div>
-            <div class="slider-item item">
-                <img class="icon" src="dist/icons/2014-9-20-virginClock@2.jpg" alt="a baby skin clock icon"/>
-            </div>
-            <div class="slider-item item">
-                <img class="icon" src="dist/icons/2014-9-25-blogLogo@2x.png" alt="blog logo"/>
-            </div>
-            <div class="slider-item item">
-                <img class="icon" src="dist/ui/2014-09-28-blogShare@1x.jpg" alt="blog logo"/>
-            </div>
-            <div class="slider-item item">
-                <img class="icon" src="dist/ui/2014-12-20-website@2x.jpg" alt="product ui design"/>
-            </div>
-           <div class="slider-item item">
-                <img class="icon" src="dist/ui/2015-1-10-UI-HeadLine@2x.jpg" alt="head line"/>
-            </div>
-             <div class="slider-item item">
-                <img class="icon" src="dist/ui/2015-1-10-color-board@2x.jpg" alt="head line"/>
-            </div>
-            <div class="slider-item item">
-                <img class="icon" src="dist/icons/2015-1-11-flat-letter.jpg" alt="flat letter"/>
-            </div>
-            <div class="slider-item item">
-                <img class="icon" src="dist/icons/evernote imitation.jpg" alt="evernote imitation"/>
-            </div>
-        </div>
+<div class="page-wrap">
+    <div class="page page1">
+        <img class="icon" src="dist/icons/2014-8-11-map.png" alt="小地图哦"/>
     </div>
-    <div class="toolbar">
-        <button class="toolbar-btn toolbar-btn-prev js-prev fa fa-arrow-left"></button>
-        <button class="toolbar-btn toolbar-btn-next js-next fa fa-arrow-right"></button>
+    <div class="page page2">
+        <img class="icon" src="dist/icons/2014-8-13-napkin.png" alt="不侧漏哦"/>
     </div>
+    <div class="page page3">
+        <img class="icon" src="dist/icons/2014-8-18-tropy.jpg" alt="Larry O'Brien NBA Championship Trophy"/>
+    </div>
+    <div class="page page4">
+        <img class="icon" src="dist/icons/2014-8-21-browser@2x.png" alt="browser icon"/>
+    </div>
+    <div class="page page5">
+        <img class="ui" src="dist/ui/2014-8-23-login-form@1x.jpg" alt="first serious sketch work"/>
+    </div>
+    <div class="page page6">
+        <img class="icon" src="dist/icons/2014-8-30-colorSwitch.jpg" alt="colorful imitation"/>
+    </div>
+    <div class="page page7">
+        <img class="ui" src="dist/ui/2014-9-16-login-peacefully@2x.jpg" alt="a peaceful login form"/>
+    </div>
+    <div class="page page8">
+        <img class="icon" src="dist/icons/2014-9-20-virginClock@2.jpg" alt="a baby skin clock icon"/>
+    </div>
+    <div class="page page9">
+        <img class="icon" src="dist/icons/2014-9-25-blogLogo@2x.png" alt="blog logo"/>
+    </div>
+    <div class="page page10">
+        <img class="icon" src="dist/ui/2014-09-28-blogShare@1x.jpg" alt="blog logo"/>
+    </div>
+    <div class="page page11">
+        <img class="icon" src="dist/ui/2014-12-20-website@2x.jpg" alt="product ui design"/>
+    </div>
+    <div class="page page12">
+        <img class="icon" src="dist/ui/2015-1-10-UI-HeadLine@2x.jpg" alt="head line"/>
+    </div>
+    <div class="page page13">
+        <img class="icon" src="dist/ui/2015-1-10-color-board@2x.jpg" alt="head line"/>
+    </div>
+    <div class="page page14">
+        <img class="icon" src="dist/icons/2015-1-11-flat-letter.jpg" alt="flat letter"/>
+    </div>
+    <div class="page page15">
+        <img class="icon" src="dist/icons/evernote imitation.jpg" alt="evernote imitation"/>
+    </div>
+</div>
     <script src="http://cdn.staticfile.org/zepto/1.0rc1/zepto.min.js"></script>
     <script src="javascript/zepto.fullpage.js"></script>
-    <script src="javascript/slider.js"></script>
     <script>
-        var slider = $('.slider-wrap');
-        var prevBtn = document.querySelector('.js-prev');
-        var nextBtn = document.querySelector('.js-next');
-        slider.slider({
-            direction: 'x',
-            infinite: true,
-            moveRadius: 30
-        });
-        prevBtn.addEventListener('click', function(){
-            slider.slider('prev');
-        });
-        nextBtn.addEventListener('click', function(){
-            slider.slider('next');
-        });
+        $('.wp-inner').fullpage();
     </script>
 </body>
 </html>

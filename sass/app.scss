@@ -7,97 +7,21 @@ body {
   background-color: #ffffff;
 }
 
-@import "zepto.fullpage.scss";
-
-.gallery {
-  top: 50%;
-  left: 50%;
-  width: 60%;
-  position: absolute;
-  white-space: nowrap;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  -webkit-box-sizing: border-box;
-  transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-
-  @media (max-width: 768px) and (min-width: 320px) {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  & .item {
-    width: 100%;
-    text-align: center;
-    vertical-align: top;
-    display: inline-block;
-    vertical-align: middle;
-    img {
-      @media (max-width: 768px) and (min-width: 320px)  {
-        max-width: 100% !important;
-      }
-    }
-    img.icon {
-      min-width: 240px;
-      max-width: 450px;
-    }
-    img.ui {
-      max-width: 450px;
-      max-height: 600px;
-    }
-  }
+.page-wrap {
+  height: 100%;
+  overflow: auto;
 }
 
-.toolbar {
-  left: 0;
-  top: 50%;
-  width: 100%;
-  position: absolute;
-  transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  &-btn {
-    width: 70px;
-    height: 70px;
-    border: none;
-    outline: none;
-    display: block;
-    color: rgb(47, 162, 197);
-    font-size: 30px;
-    text-align: center;
-    line-height: 70px;
-    border-radius: 50%;
-    border: 1px solid rgb(47, 162, 197);
-    background-color: transparent;
-    -webkit-transition: all .2ss;
-    -moz-transition: all .2ss;
-    -ms-transition: all .2ss;
-    -o-transition: all .2ss;
-    transition: all .2ss;
-    &:hover {
-      background-color: rgb(47, 162, 197);
-      &:before {
-        color: #ffffff
-      }
-    }
-    &-prev {
-      float: left;
-      margin-left: 80px;
-      @media (max-width: 768px) and (min-width: 320px) {
-        margin-left: 10px;
-      }
-    }
-    &-next {
-      float: right;
-      margin-right: 80px;
-      @media (max-width: 768px) and (min-width: 320px)  {
-        margin-right: 10px;
-      }
-    }
-  }
+.page {
+  min-height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #dddddd;
+}
+.page > img {
+  display: block;
+  min-width: 40%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
