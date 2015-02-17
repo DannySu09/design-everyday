@@ -9,57 +9,107 @@
     <link rel="stylesheet" href="style/app.css"/>
 </head>
 <body>
-<div class="page-wrap">
+<div class="main">
     <div class="page page1">
-        <img class="icon" src="dist/icons/2014-8-11-map.png" alt="小地图哦"/>
+        <div class="page-wrap">
+            <img class="icon j-notPick" src="dist/icons/2014-8-11-map.png" alt="小地图哦"/>
+        </div>
     </div>
     <div class="page page2">
-        <img class="icon" src="dist/icons/2014-8-13-napkin.png" alt="不侧漏哦"/>
+        <div class="page-wrap">
+            <img class="icon" src="dist/icons/2014-8-13-napkin.png" alt="不侧漏哦"/>
+        </div>
     </div>
     <div class="page page3">
-        <img class="icon" src="dist/icons/2014-8-18-tropy.jpg" alt="Larry O'Brien NBA Championship Trophy"/>
+        <div class="page-wrap">
+            <img class="icon" src="dist/icons/2014-8-18-tropy.jpg" alt="Larry O'Brien NBA Championship Trophy"/>
+        </div>
     </div>
     <div class="page page4">
-        <img class="icon" src="dist/icons/2014-8-21-browser@2x.png" alt="browser icon"/>
+        <div class="page-wrap">
+            <img class="icon j-notPick" src="dist/icons/2014-8-21-browser@2x.png" alt="browser icon"/>
+        </div>
     </div>
     <div class="page page5">
-        <img class="ui" src="dist/ui/2014-8-23-login-form@1x.jpg" alt="first serious sketch work"/>
+        <div class="page-wrap">
+            <img class="ui" src="dist/ui/2014-8-23-login-form@1x.jpg" alt="first serious sketch work"/>
+        </div>
     </div>
     <div class="page page6">
-        <img class="icon" src="dist/icons/2014-8-30-colorSwitch.jpg" alt="colorful imitation"/>
+        <div class="page-wrap">
+            <img class="icon" src="dist/icons/2014-8-30-colorSwitch.jpg" alt="colorful imitation"/>
+        </div>
     </div>
     <div class="page page7">
-        <img class="ui" src="dist/ui/2014-9-16-login-peacefully@2x.jpg" alt="a peaceful login form"/>
+        <div class="page-wrap">
+            <img class="ui" src="dist/ui/2014-9-16-login-peacefully@2x.jpg" alt="a peaceful login form"/>
+        </div>
     </div>
     <div class="page page8">
-        <img class="icon" src="dist/icons/2014-9-20-virginClock@2.jpg" alt="a baby skin clock icon"/>
+        <div class="page-wrap">
+            <img class="icon j-notPick" src="dist/icons/2014-9-20-virginClock@2.jpg" alt="a baby skin clock icon"/>
+        </div>
     </div>
     <div class="page page9">
-        <img class="icon" src="dist/icons/2014-9-25-blogLogo@2x.png" alt="blog logo"/>
+        <div class="page-wrap">
+            <img class="icon icon--small j-notPick" src="dist/icons/2014-9-25-blogLogo@2x.png" alt="blog logo"/>
+        </div>
     </div>
     <div class="page page10">
-        <img class="icon" src="dist/ui/2014-09-28-blogShare@1x.jpg" alt="blog logo"/>
+        <div class="page-wrap">
+            <img class="icon" src="dist/ui/2014-09-28-blogShare@1x.jpg" alt="blog logo"/>
+        </div>
     </div>
     <div class="page page11">
-        <img class="icon" src="dist/ui/2014-12-20-website@2x.jpg" alt="product ui design"/>
+        <div class="page-wrap">
+            <img class="icon" src="dist/ui/2014-12-20-website@2x.jpg" alt="product ui design"/>
+        </div>
     </div>
     <div class="page page12">
-        <img class="icon" src="dist/ui/2015-1-10-UI-HeadLine@2x.jpg" alt="head line"/>
+        <div class="page-wrap">
+            <img class="icon" src="dist/ui/2015-1-10-UI-HeadLine@2x.jpg" alt="head line"/>
+        </div>
     </div>
     <div class="page page13">
-        <img class="icon" src="dist/ui/2015-1-10-color-board@2x.jpg" alt="head line"/>
+        <div class="page-wrap">
+            <img class="icon" src="dist/ui/2015-1-10-color-board@2x.jpg" alt="head line"/>
+        </div>
     </div>
     <div class="page page14">
-        <img class="icon" src="dist/icons/2015-1-11-flat-letter.jpg" alt="flat letter"/>
+        <div class="page-wrap">
+            <img class="icon" src="dist/icons/2015-1-11-flat-letter.jpg" alt="flat letter"/>
+        </div>
     </div>
     <div class="page page15">
-        <img class="icon" src="dist/icons/evernote imitation.jpg" alt="evernote imitation"/>
+        <div class="page-wrap">
+            <img class="icon" src="dist/icons/evernote imitation.jpg" alt="evernote imitation"/>
+        </div>
     </div>
 </div>
-    <script src="http://cdn.staticfile.org/zepto/1.0rc1/zepto.min.js"></script>
-    <script src="javascript/zepto.fullpage.js"></script>
-    <script>
-        $('.wp-inner').fullpage();
-    </script>
+<script src="javascript/color-thief.min.js"></script>
+<script>
+    var pages = document.getElementsByClassName('page');
+    var thief = new ColorThief();
+    var pickColor = function(page){
+        var img = page.querySelector('img');
+        if(img.className.indexOf('j-notPick') > -1) {
+            return;
+        }
+
+        var setBackground = function(){
+            var colorVal = 'rgb(' + thief.getColor(this).join(',') + ')';
+            page.style.backgroundColor = colorVal;
+        };
+
+        if(img.complete === true) {
+            setBackground.call(img);
+        } else {
+            img.onload = setBackground;
+        }
+    };
+    for(var i = 0, len = pages.length; i < len; i++) {
+        pickColor(pages[i]);
+    }
+</script>
 </body>
 </html>
