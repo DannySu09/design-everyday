@@ -31,11 +31,11 @@ img {
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3); }
 
 .icon {
-  max-width: 50%; }
+  max-width: 30%; }
 
 .icon.icon--small {
-  min-width: 0;
   width: 10%; }
 
 .ui {
+  min-width: 20%;
   max-height: 90%; }
