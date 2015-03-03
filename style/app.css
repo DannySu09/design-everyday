@@ -33,6 +33,9 @@ img {
 .icon {
   max-width: 30%; }
 
+@media (max-width: 800) {
+  .icon {
+    max-width: 60%; } }
 .icon.icon--small {
   width: 10%; }
 
